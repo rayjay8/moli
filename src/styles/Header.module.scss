@@ -1,0 +1,20 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100vw;
+  height: 85px;
+  padding: 0 100px;
+  border-bottom: solid 1px #b7b7b7;
+
+  .iconContainer {
+    width: 11%;
+  }
+
+  .header__account_icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    // gap: 20px;
+  }
+}

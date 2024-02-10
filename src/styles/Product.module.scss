@@ -1,0 +1,34 @@
+.product {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  //   border: 1px solid #e0e0e0;
+  width: 250px;
+  gap: 10px;
+  .price {
+    // font-weight: 600;
+  }
+  .image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border: 1px solid #e0e0e0;
+    margin-bottom: 10px;
+    border-radius: 8px;
+  }
+  .button {
+    width: 100%;
+    margin-top: 5px;
+    padding: 10px;
+    border: none;
+    // border-radius: 10px;
+    background-color: #000;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    &:hover {
+      background-color: #f0a040;
+    }
+  }
+}
