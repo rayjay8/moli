@@ -42,8 +42,8 @@ const logout = () => {
   localStorage.removeItem("token");
 };
 
-const isAuthenticated = () => {
+export const isAuthenticated = () => {
   return localStorage.getItem("token") !== null;
 };
 
-export { api, register, login, logout, isAuthenticated };
+export { api, register, login, logout };

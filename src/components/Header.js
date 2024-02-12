@@ -12,7 +12,9 @@ const Header = () => {
         </div>
       </div>
       <div className="header__logo">
-        <Image src="/images/logo.png" alt="logo" width={100} height={50} />
+        <Link href={"/"}>
+          <Image src="/images/logo.png" alt="logo" width={100} height={50} />
+        </Link>
       </div>
       <div className={styles.iconContainer}>
         <div className={styles.header__account_icons}>
