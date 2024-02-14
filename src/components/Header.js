@@ -18,7 +18,9 @@ const Header = () => {
       </div>
       <div className={styles.iconContainer}>
         <div className={styles.header__account_icons}>
-          <Image src="/images/cart-1.svg" alt="cart" width={30} height={30} />
+          <Link href={"/cart"}>
+            <Image src="/images/cart-1.svg" alt="cart" width={30} height={30} />
+          </Link>
           <Image src="/images/heart.svg" alt="user" width={30} height={30} />
           <Image src="/images/user-2.svg" alt="user" width={30} height={30} />
         </div>

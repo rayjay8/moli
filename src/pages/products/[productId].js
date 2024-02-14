@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
-import { fetchProduct, addToCart, addToWishlist } from "@/utils/api"; // Import addToWishlist
+import { fetchProduct, addToCart, addToWishlist } from "@/utils/api";
 import DefaultLayout from "@/layouts/DefaultLayout";
 import styles from "@/styles/[productId].module.scss";
 import Image from "next/image";
