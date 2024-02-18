@@ -1,0 +1,12 @@
+.container {
+  padding-top: 40px;
+  .heading {
+  }
+  .items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-top: 40px;
+    gap: 30px;
+  }
+}

@@ -1,0 +1,38 @@
+.container {
+  width: 25%;
+  height: 100vh;
+  background-color: #fff;
+  position: absolute;
+  z-index: 5;
+  border: 1px solid #e0e0e0;
+  padding: 80px;
+  transition: all 0.5s ease-in-out;
+  .overlay {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    cursor: pointer;
+  }
+  .menu {
+    display: flex;
+    flex-direction: column;
+    .categories {
+      margin-bottom: 20px;
+      h1 {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+      }
+      .category {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+      }
+    }
+    a {
+      h1 {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}

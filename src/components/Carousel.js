@@ -16,6 +16,7 @@ const Carousel = ({ title }) => {
       try {
         const data = await fetchProducts();
         setProducts(data.slice(0, 6));
+        console.log("Fetched products:", data);
       } catch (error) {
         console.error("Error fetching products:", error);
       }
@@ -32,7 +33,6 @@ const Carousel = ({ title }) => {
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 1,
-    // autoplay: true,
   };
 
   return (

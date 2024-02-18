@@ -29,10 +29,6 @@ const ProductPage = () => {
     }
   }, [productId]);
 
-  if (!product) {
-    return <div>Loading...</div>;
-  }
-
   const increaseQuantity = () => {
     setQuantity(quantity + 1);
   };
@@ -65,60 +61,64 @@ const ProductPage = () => {
 
   return (
     <DefaultLayout>
-      <div className={styles.layout}>
-        <div className={styles.mediaGrid}>
-          <div className={styles.image}></div>
-          <div className={styles.image}></div>
-          <div className={styles.image}></div>
-          <div className={styles.image}></div>
-          <div className={styles.image}></div>
-        </div>
-        <div className={styles.details}>
-          <h1>{product.name}</h1>
-          <p className={styles.price}>₹ {product.price}</p>
-          <p className={styles.rating}>{product.rating}</p>
-          <div className={styles.quantity}>
-            <p>Quantity:</p>
-            <div className={styles.quantityCounter}>
-              <button onClick={decreaseQuantity}>-</button>
-              <span>{quantity}</span>
-              <button onClick={increaseQuantity}>+</button>
-            </div>
+      {product ? (
+        <div className={styles.layout}>
+          <div className={styles.mediaGrid}>
+            <div className={styles.image}></div>
+            <div className={styles.image}></div>
+            <div className={styles.image}></div>
+            <div className={styles.image}></div>
+            <div className={styles.image}></div>
           </div>
-          <div className={styles.sizes}>
-            <p>Select your size:</p>
-            <div className={styles.sizeDisplay}>
-              {product.sizes.map((size, index) => (
-                <input
-                  key={index}
-                  type="button"
-                  value={size}
-                  className={styles.sizeInput}
+          <div className={styles.details}>
+            <h1>{product.name}</h1>
+            <p className={styles.price}>$ {product.price}</p>
+            <p className={styles.rating}>{product.rating}</p>
+            <div className={styles.quantity}>
+              <p>Quantity:</p>
+              <div className={styles.quantityCounter}>
+                <button onClick={decreaseQuantity}>-</button>
+                <span>{quantity}</span>
+                <button onClick={increaseQuantity}>+</button>
+              </div>
+            </div>
+            <div className={styles.sizes}>
+              <p>Select your size:</p>
+              <div className={styles.sizeDisplay}>
+                {product.sizes.map((size, index) => (
+                  <input
+                    key={index}
+                    type="button"
+                    value={size}
+                    className={styles.sizeInput}
+                  />
+                ))}
+              </div>
+            </div>
+            <div className={styles.buttons}>
+              <button className={styles.button} onClick={handleAddToCart}>
+                Add to Cart
+              </button>
+              <div className={styles.favorite} onClick={handleAddToWishlist}>
+                {" "}
+                {/* Add onClick event */}
+                <Image
+                  src="/images/heart.svg"
+                  alt="Favorite"
+                  width={28}
+                  height={28}
                 />
-              ))}
+              </div>
             </div>
-          </div>
-          <div className={styles.buttons}>
-            <button className={styles.button} onClick={handleAddToCart}>
-              Add to Cart
-            </button>
-            <div className={styles.favorite} onClick={handleAddToWishlist}>
-              {" "}
-              {/* Add onClick event */}
-              <Image
-                src="/images/heart.svg"
-                alt="Favorite"
-                width={28}
-                height={28}
-              />
+            <div className={styles.description}>
+              <h2>Description:</h2>
+              <p>{product.description}</p>
             </div>
-          </div>
-          <div className={styles.description}>
-            <h2>Description:</h2>
-            <p>{product.description}</p>
           </div>
         </div>
-      </div>
+      ) : (
+        <p>Loading...</p>
+      )}
     </DefaultLayout>
   );
 };

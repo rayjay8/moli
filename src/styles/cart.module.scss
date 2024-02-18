@@ -3,4 +3,125 @@
   align-items: stretch;
   justify-content: space-between;
   flex-direction: column;
+  padding-top: 40px;
+  .cart {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 30px;
+    gap: 30px;
+    .items {
+      width: 70%;
+      display: flex;
+      gap: 20px;
+      flex-direction: column;
+      padding-bottom: 50px;
+      .itemContainer {
+        display: flex;
+        flex-direction: row;
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        .thumb {
+          width: 140px;
+          height: 140px;
+          background-color: #e0e0e0;
+          border-radius: 8px;
+        }
+        .details {
+          padding: 20px;
+          width: 80%;
+          .itemName {
+            margin-bottom: 20px;
+          }
+        }
+        .price {
+          text-align: right;
+          width: 20%;
+          padding: 20px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          .bin {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+    .checkout {
+      width: 30%;
+      border: 1px solid #e0e0e0;
+      padding: 30px;
+      border-radius: 8px;
+      margin-top: 40px;
+      .heading {
+        font-weight: 600;
+        font-size: 1.2rem;
+        margin-bottom: 25px;
+      }
+      .total {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        .left {
+          display: flex;
+          flex-direction: column;
+          align-items: stretch;
+          gap: 15px;
+          .coupon {
+            padding: 10px;
+            border: 1px solid #e0e0e0;
+            border-radius: 5px;
+            font-size: 0.8rem;
+            color: #414141;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            &:hover {
+              background-color: #f0f0f0;
+            }
+          }
+        }
+        .prices {
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+          p {
+            font-size: 0.8rem;
+            text-align: right;
+            color: #333;
+          }
+        }
+        .line {
+          width: 100%;
+          border: 0.5px solid #e0e0e0;
+        }
+        hr {
+          border: 0.5px solid #e0e0e0;
+          margin: 15px 0;
+        }
+        .totalAmount {
+          font-weight: 600;
+          font-size: 1.1rem;
+        }
+      }
+      .buy {
+        margin-top: 25px;
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        background-color: #000;
+        color: #fff;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        &:hover {
+          background-color: #232121;
+        }
+      }
+    }
+  }
 }
